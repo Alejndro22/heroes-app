@@ -1,5 +1,5 @@
 import { HeroesApp } from '../HeroesApp';
-import { LoginPage } from '../auth/pages/LoginPage';
+import { LoginPage } from '../auth';
 import { DcPage, MarvelPage } from '../heroes';
 import ErrorPage from '../heroes/pages/ErrorPage';
 
