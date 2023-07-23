@@ -5,7 +5,9 @@ export const HeroesApp = () => {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <div className='container px-4 mx-auto'>
+        <Outlet />
+      </div>
     </>
   );
 };
