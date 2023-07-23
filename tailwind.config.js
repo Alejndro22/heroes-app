@@ -2,7 +2,12 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'mountbatten-pink': '#987284',
+        'earth-yellow': '#E0A458',
+      },
+    },
   },
   plugins: [],
 };
