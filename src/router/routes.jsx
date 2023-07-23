@@ -1,8 +1,8 @@
-import { HeroesApp } from '../src/HeroesApp';
-import { LoginPage } from '../src/auth/pages/LoginPage';
-import { DcPage } from '../src/heroes/pages/DcPage';
-import { MarvelPage } from '../src/heroes/pages/MarvelPage';
-import ErrorPage from '../src/heroes/pages/ErrorPage';
+import { HeroesApp } from '../HeroesApp';
+import { LoginPage } from '../auth/pages/LoginPage';
+import { DcPage } from '../heroes/pages/DcPage';
+import { MarvelPage } from '../heroes/pages/MarvelPage';
+import ErrorPage from '../heroes/pages/ErrorPage';
 
 export const routes = [
   {
