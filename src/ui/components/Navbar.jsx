@@ -1,8 +1,15 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 export const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const navigate = useNavigate();
+
+  const onLogout = () => {
+    navigate('/login', { replace: true });
+  };
+
   return (
     <>
       <nav className='relative flex flex-wrap items-center justify-between px-2 py-3 bg-zinc-900 mb-3'>
@@ -76,7 +83,10 @@ export const Navbar = () => {
               <span className='nav-item nav-link px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-earth-yellow hover:opacity-100 text-md leading-md'>
                 Doug
               </span>
-              <button className='nav-item nav-link px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-mountbatten-pink hover:opacity-100 text-md leading-md border-mountbatten-pink rounded hover:border-2'>
+              <button
+                className='nav-item nav-link px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-mountbatten-pink hover:opacity-100 text-md leading-md border-mountbatten-pink rounded hover:border-2'
+                onClick={onLogout}
+              >
                 <span className='ml-2'>Logout</span>
               </button>
             </div>
