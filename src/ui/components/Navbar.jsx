@@ -40,7 +40,7 @@ export const Navbar = () => {
           </div>
           <div
             className={
-              'md:flex flex-grow items-center' +
+              'md:flex flex-grow items-center justify-between' +
               (navbarOpen ? ' flex' : ' hidden')
             }
           >
@@ -80,14 +80,14 @@ export const Navbar = () => {
             </div>
 
             <div className='flex flex-col md:flex-row list-none md:ml-auto'>
-              <span className='nav-item nav-link px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-earth-yellow hover:opacity-100 text-md leading-md'>
+              <span className='nav-item nav-link px-3 py-2 flex items-center justify-center text-xs uppercase font-bold leading-snug text-earth-yellow hover:opacity-100 text-md leading-md'>
                 Doug
               </span>
               <button
-                className='nav-item nav-link px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-mountbatten-pink hover:opacity-100 text-md leading-md border-mountbatten-pink rounded hover:border-2'
+                className='nav-item nav-link px-3 py-2 flex items-center justify-center text-xs uppercase font-bold leading-snug text-mountbatten-pink hover:opacity-100 text-md leading-md border-mountbatten-pink rounded hover:border-2'
                 onClick={onLogout}
               >
-                <span className='ml-2'>Logout</span>
+                <span className=''>Logout</span>
               </button>
             </div>
           </div>
