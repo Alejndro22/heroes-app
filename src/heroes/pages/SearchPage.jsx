@@ -1,8 +1,8 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import queryString from 'query-string';
-
 import { useForm } from '../../hooks/useForm';
 import { HeroCard } from '../components/HeroCard';
+import { getHeroesByName } from '../helpers/getHeroesByName';
 
 export const SearchPage = () => {
   const navigate = useNavigate();
@@ -11,8 +11,10 @@ export const SearchPage = () => {
   const location = useLocation();
   const { q = '' } = queryString.parse(location.search);
 
-  const { searchText, onInputChange, onResetForm } = useForm({
-    searchText: '',
+  const heroes = getHeroesByName(q);
+
+  const { searchText, onInputChange } = useForm({
+    searchText: q,
   });
 
   const onSearchSubmit = (e) => {
@@ -21,7 +23,6 @@ export const SearchPage = () => {
 
     // When onSearchSubmit navigate to query parameter path
     navigate(`?q=${searchText}`);
-    onResetForm();
   };
 
   return (
@@ -99,7 +100,11 @@ export const SearchPage = () => {
             </div>
           </div>
 
-          {/* <HeroCard /> */}
+          <div>
+            {heroes.map((hero) => (
+              <HeroCard key={hero.id} {...hero} />
+            ))}
+          </div>
         </div>
       </div>
     </>
