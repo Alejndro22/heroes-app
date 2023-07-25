@@ -18,7 +18,7 @@ export const HeroCard = ({
   const heroImageURL = `/assets/heroes/${id}.jpg`;
 
   return (
-    <div className='max-w-sm w-full sm:max-w-full sm:flex sm:h-full border rounded-md border-gray-200'>
+    <div className='max-w-sm w-full sm:max-w-full sm:flex sm:h-full border rounded-md border-gray-200 animate__animated animate__fadeIn'>
       <div className='h-96 sm:h-auto sm:w-24 flex-none bg-cover rounded-t sm:rounded-t-none sm:rounded-l overflow-hidden'>
         <img src={heroImageURL} alt={superhero} />
       </div>

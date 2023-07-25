@@ -17,7 +17,7 @@ export const HeroPage = () => {
   }
 
   return (
-    <div className='mt-8 grid grid-cols-3 gap-8'>
+    <div className='mt-8 grid grid-cols-3 gap-8 animate__animated animate__fadeInLeft'>
       <div className='col-span-1'>
         <img
           src={`/assets/heroes/${id}.jpg`}
