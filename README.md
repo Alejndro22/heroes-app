@@ -10,3 +10,7 @@ Currently, two official plugins are available:
 ## Color Palette
 
 https://coolors.co/18181b-987284-e0a458-048ba8-16db93
+
+## Animations using Animate.css CDN
+
+https://animate.style/
