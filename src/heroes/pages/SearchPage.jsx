@@ -1,6 +1,29 @@
+import { useLocation, useNavigate } from 'react-router-dom';
+import queryString from 'query-string';
+
+import { useForm } from '../../hooks/useForm';
 import { HeroCard } from '../components/HeroCard';
 
 export const SearchPage = () => {
+  const navigate = useNavigate();
+
+  // get query parameters, use query-string to handle easily different parameters
+  const location = useLocation();
+  const { q = '' } = queryString.parse(location.search);
+
+  const { searchText, onInputChange, onResetForm } = useForm({
+    searchText: '',
+  });
+
+  const onSearchSubmit = (e) => {
+    e.preventDefault();
+    if (searchText.trim().length <= 1) return;
+
+    // When onSearchSubmit navigate to query parameter path
+    navigate(`?q=${searchText}`);
+    onResetForm();
+  };
+
   return (
     <>
       <h1 className='mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
@@ -15,12 +38,14 @@ export const SearchPage = () => {
           </h4>
           <hr />
 
-          <form className='flex flex-col'>
+          <form className='flex flex-col' onSubmit={onSearchSubmit}>
             <input
               type='text'
               placeholder='Search a hero'
               name='searchText'
               autoComplete='off'
+              value={searchText}
+              onChange={onInputChange}
               className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-munsell-blue focus:border-munsell-blue block w-full p-2.5'
             />
 
@@ -65,8 +90,9 @@ export const SearchPage = () => {
                   <path d='M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z' />
                 </svg>
               </div>
+
               <div>
-                <p className='font-bold'>No hero found</p>
+                <p className='font-bold'>No hero found with q={q}</p>
 
                 <p className='text-sm'>Please search another hero</p>
               </div>
