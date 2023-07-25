@@ -6,6 +6,8 @@ export default {
       colors: {
         'mountbatten-pink': '#987284',
         'earth-yellow': '#E0A458',
+        'munsell-blue': '#048BA8',
+        emerald: '#16DB93',
       },
     },
   },
