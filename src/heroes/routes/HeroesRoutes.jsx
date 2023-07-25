@@ -14,7 +14,7 @@ export const heroesRoutes = [
     element: <SearchPage />,
   },
   {
-    path: 'hero',
+    path: 'hero/:id',
     element: <HeroPage />,
   },
 ];
