@@ -20,7 +20,7 @@ export const HeroPage = () => {
     <div className='mt-8 grid grid-cols-3 gap-8 animate__animated animate__fadeInLeft'>
       <div className='col-span-1'>
         <img
-          src={`/assets/heroes/${id}.jpg`}
+          src={`./../assets/heroes/${id}.jpg`}
           alt={hero.superhero}
           className='border border-gray-300 rounded-md p-1 h-64 sm:h-auto'
         />
