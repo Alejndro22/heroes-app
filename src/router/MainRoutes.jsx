@@ -1,5 +1,5 @@
 import { HeroesRoutes } from '../heroes';
-import { LoginPage } from '../auth/pages/LoginPage';
+import { LoginPage } from '../auth';
 import { heroesChildrenRoutes } from './HeroesRoutes';
 import ErrorPage from '../heroes/pages/ErrorPage';
 
