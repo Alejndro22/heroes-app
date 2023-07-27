@@ -1,14 +1,14 @@
-import { HeroesApp } from '../HeroesApp';
+import { HeroesRoutes } from '../heroes';
 import { LoginPage } from '../auth/pages/LoginPage';
-import { heroesRoutes } from '../heroes';
+import { heroesChildrenRoutes } from './HeroesRoutes';
 import ErrorPage from '../heroes/pages/ErrorPage';
 
 export const routes = [
   {
     path: '/',
-    element: <HeroesApp />,
+    element: <HeroesRoutes />,
     errorElement: <ErrorPage />,
-    children: heroesRoutes,
+    children: heroesChildrenRoutes,
   },
 
   {
