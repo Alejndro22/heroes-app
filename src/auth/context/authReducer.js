@@ -1,5 +1,6 @@
 import { types } from '../types/types';
 
+// I shouldn't call anything external here, like localStorage, APIs, etc
 export const authReducer = (state = {}, action) => {
   switch (action.type) {
     case types.login:
