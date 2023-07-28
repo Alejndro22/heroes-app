@@ -1,3 +1,4 @@
+// import { Navigate } from 'react-router-dom';
 import { DcPage, HeroPage, MarvelPage, SearchPage } from '../heroes';
 
 export const heroesChildrenRoutes = [
@@ -17,4 +18,8 @@ export const heroesChildrenRoutes = [
     path: 'hero/:id',
     element: <HeroPage />,
   },
+  // {
+  //   path: '/*',
+  //   element: <Navigate to={'/marvel'} replace={true} />,
+  // },
 ];

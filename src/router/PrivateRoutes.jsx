@@ -14,5 +14,7 @@ export const PrivateRoutes = ({ children }) => {
     localStorage.setItem('lastPath', lastPath);
   }, [pathname, search]);
 
+  if (pathname + search === '/') return <Navigate to={'/marvel'} />;
+
   return logged ? children : <Navigate to={'/login'} />;
 };
