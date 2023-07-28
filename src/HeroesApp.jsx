@@ -1,13 +1,10 @@
-import { Outlet } from 'react-router';
-import { Navbar } from './ui';
+import { AuthProvider } from './auth/context/AuthProvider';
+import { AppRouter } from './router/AppRouter';
 
 export const HeroesApp = () => {
   return (
-    <>
-      <Navbar />
-      <div className='container mx-auto px-4'>
-        <Outlet />
-      </div>
-    </>
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
   );
 };

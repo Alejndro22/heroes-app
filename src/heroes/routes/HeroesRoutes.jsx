@@ -1,20 +1,13 @@
-import { DcPage, HeroPage, MarvelPage, SearchPage } from '../pages';
+import { Outlet } from 'react-router';
+import { Navbar } from '../../ui';
 
-export const heroesRoutes = [
-  {
-    path: 'marvel',
-    element: <MarvelPage />,
-  },
-  {
-    path: 'dc',
-    element: <DcPage />,
-  },
-  {
-    path: 'search',
-    element: <SearchPage />,
-  },
-  {
-    path: 'hero/:id',
-    element: <HeroPage />,
-  },
-];
+export const HeroesRoutes = () => {
+  return (
+    <>
+      <Navbar />
+      <div className='container mx-auto px-4'>
+        <Outlet />
+      </div>
+    </>
+  );
+};
