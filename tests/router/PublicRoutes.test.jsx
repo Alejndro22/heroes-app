@@ -28,8 +28,9 @@ describe('tests on <PublicRoutes />', () => {
       user: { id: 'abc', name: 'testing' },
     };
 
+    // altough initialEntry is /login, this Navegate to /marvel
     render(
-      <MemoryRouter initialEntries={['/marvel']}>
+      <MemoryRouter initialEntries={['/login']}>
         <AuthContext.Provider value={contextValue}>
           <Routes>
             <Route element={<PublicRoutes />}>
