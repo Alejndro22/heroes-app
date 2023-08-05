@@ -40,7 +40,11 @@ export const SearchPage = () => {
           </h4>
           <hr />
 
-          <form className='flex flex-col' onSubmit={onSearchSubmit}>
+          <form
+            className='flex flex-col'
+            aria-label='form-test'
+            onSubmit={onSearchSubmit}
+          >
             <input
               type='text'
               placeholder='Search a hero'
