@@ -1,12 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import {
-  MemoryRouter,
-  RouterProvider,
-  createMemoryRouter,
-} from 'react-router-dom';
+import { RouterProvider, createMemoryRouter } from 'react-router-dom';
 import { AuthContext } from '../../src/auth';
 import { routes } from '../../src/router/MainRoutes';
-import { AppRouter } from '../../src/router/AppRouter';
 
 describe('tests on <AppRouter />', () => {
   test('should display login if user is not logged', () => {

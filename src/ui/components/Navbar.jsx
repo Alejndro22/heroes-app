@@ -84,11 +84,15 @@ export const Navbar = () => {
             </div>
 
             <div className='flex flex-col md:flex-row list-none md:ml-auto'>
-              <span className='nav-item nav-link px-3 py-2 flex items-center justify-center text-xs uppercase font-bold leading-snug text-earth-yellow hover:opacity-100 text-md leading-md'>
+              <span
+                className='nav-item nav-link px-3 py-2 flex items-center justify-center text-xs uppercase font-bold leading-snug text-earth-yellow hover:opacity-100 text-md leading-md'
+                aria-label='username'
+              >
                 {user?.name}
               </span>
               <button
                 className='nav-item nav-link px-3 py-2 flex items-center justify-center text-xs uppercase font-bold leading-snug text-mountbatten-pink hover:opacity-100 text-md leading-md border-mountbatten-pink rounded hover:border-2'
+                aria-label='logout'
                 onClick={onLogout}
               >
                 <span className=''>Logout</span>
